@@ -52,12 +52,13 @@
               class="hover:-translate-y-2 hover:scale-110 hover:shadow-md transition-all"
             ></v-icon>
           </a>
-          <a href="https://youtube.com/@anasnasuhaa"></a>
-          <v-icon
-            name="fa-youtube"
-            scale="3"
-            class="hover:-translate-y-2 hover:scale-110 hover:shadow-md transition-all"
-          ></v-icon>
+          <a href="https://youtube.com/@anasnasuhaa">
+            <v-icon
+              name="fa-youtube"
+              scale="3"
+              class="hover:-translate-y-2 hover:scale-110 hover:shadow-md transition-all"
+            ></v-icon>
+          </a>
         </div>
       </div>
     </div>
