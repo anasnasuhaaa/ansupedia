@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-anas",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^12.3.0",
+    "flowbite": "^2.5.2",
+    "oh-vue-icons": "^1.0.0-rc3",
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13",
+    "vue-writer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.23",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.5"
+  }
+}
