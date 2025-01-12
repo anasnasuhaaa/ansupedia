@@ -1,9 +1,11 @@
 <template>
-  <Title></Title>
-  <div
-    class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-10"
-  >
-    <CardProject :project="project"></CardProject>
+  <div class="p-4 md:p-6">
+    <Title></Title>
+    <div
+      class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-10"
+    >
+      <CardProject :project="project"></CardProject>
+    </div>
   </div>
 </template>
 <script setup>
@@ -17,8 +19,10 @@ import apiprojectImg from "../assets/img/portfolio/apiproject.png";
 import ansumovieImg from "../assets/img/portfolio/ansumovie.png";
 import ansjobImg from "../assets/img/portfolio/ansjob.png";
 import webRs from "../assets/img/portfolio/webrs.png";
+import anstoreImg from "../assets/img/portfolio/anstore.png";
+import portfoliowebImg from "../assets/img/portfolio/portfolioweb.png";
 
-provide("name", "Protfolio");
+provide("name", "My Project");
 const project = ref([
   {
     id: 1,
@@ -54,10 +58,11 @@ const project = ref([
       },
     ],
   },
+
   {
     id: 2,
     name: "AnsuMovie",
-    description: "",
+    description: "Fetch API from IMDB with Axios.",
     repoLink: "#",
     imgPath: ansumovieImg,
     deployLink: "https://ansu-movie.vercel.app/",
@@ -78,8 +83,58 @@ const project = ref([
   },
   {
     id: 3,
+    name: "Anstore",
+    description: "Simple E-Commerce Web with generate qr code feature.",
+    imgPath: anstoreImg,
+    repoLink: "#",
+    deployLink: "#",
+    techStack: [
+      {
+        id: 1,
+        name: "laravel",
+        icon: "co-laravel",
+        color: "text-laravel",
+      },
+      {
+        id: 2,
+        name: "My SQL",
+        icon: "co-mysql",
+        color: "text-jquery",
+      },
+      {
+        id: 3,
+        name: "Tailwind",
+        icon: "si-tailwindcss",
+        color: "text-react",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Ansupedia",
+    description: "My Protfolio Website",
+    repoLink: "#",
+    imgPath: portfoliowebImg,
+    deployLink: "/",
+    techStack: [
+      {
+        id: 1,
+        name: "Vue Js",
+        icon: "co-vue-js",
+        color: "text-green-500",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        icon: "si-tailwindcss",
+        color: "text-react",
+      },
+    ],
+  },
+  {
+    id: 5,
     name: "AnsJob",
-    description: "If a dog chews shoes whose shoes does he choose?",
+    description: "Final Project React Js Sanbercode Bootcamp.",
     repoLink: "#",
     imgPath: ansjobImg,
     deployLink: "https://ansjob-react-liard.vercel.app/",
@@ -99,10 +154,10 @@ const project = ref([
     ],
   },
   {
-    id: 4,
+    id: 6,
     name: "K12Toprak",
     description:
-      "Class 12 website, Learning Camp batch 2025 Perintis Scholarships",
+      "Class 12 website, Learning Camp batch 2025 Perintis Scholarships.",
     repoLink: "#",
     imgPath: k12toprakImg,
     deployLink: "https://k12toprak.vercel.app",
@@ -128,9 +183,9 @@ const project = ref([
     ],
   },
   {
-    id: 5,
+    id: 7,
     name: "Hospital Website",
-    description: "This is my first project when learning web development",
+    description: "My 1st native HTML, CSS & JS Project",
     repoLink: "#",
     imgPath: webRs,
     deployLink: "https://anas-rsud-indramayu.vercel.app/",
@@ -156,14 +211,14 @@ const project = ref([
     ],
   },
   {
-    id: 6,
+    id: 8,
     name: "API Movie Review",
-    description: "This is my first project when learning web development",
+    description: "Laravel Rest API with Json Web Token (JWT).",
     repoLink: "#",
     imgPath: apiprojectImg,
     deployLink: "https://documenter.getpostman.com/view/32020683/2sAYJ6CfTF",
     techStack: [
-    {
+      {
         id: 1,
         name: "laravel",
         icon: "co-laravel",

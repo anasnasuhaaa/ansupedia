@@ -1,7 +1,9 @@
 <template>
-  <Title></Title>
-  <div class="mb-10">
-    <Timeline :experience="experiences"></Timeline>
+  <div class="p-4 md:p-6">
+    <Title></Title>
+    <div class="mb-10">
+      <Timeline :experience="experiences"></Timeline>
+    </div>
   </div>
 </template>
 
@@ -10,7 +12,7 @@ import { provide, ref } from "vue";
 import Title from "../components/Title.vue";
 import Timeline from "../components/Timeline.vue";
 
-provide("name", "Experiences");
+provide("name", "My Experience");
 
 const experiences = ref([
   {
@@ -27,7 +29,7 @@ const experiences = ref([
     year: "Aug 2024 - Nov 2024",
     timelinePossition: "timeline-end",
     description:
-      "Internship as a Web Developer with Laravel and contribute to 6 real company projects.",
+      "Internship as a Web Developer using Laravel and contribute to 6 real company projects.",
   },
   {
     id: 3,
@@ -39,11 +41,11 @@ const experiences = ref([
   },
   {
     id: 4,
-    company: "Bootcamp React JS batch 54 Sanbercode",
+    company: "Bootcamp React Js batch 54 Sanbercode",
     year: "Mar 2024",
     timelinePossition: "timeline-end ",
     description:
-      "became a student at the 54th batch of Sanbercode React Js Bootcamp who learned about Web Frontend Development with React Js.",
+      "became a student at the 54th batch of Sanbercode React Js Bootcamp who learned about Web Frontend Development using React Js.",
   },
 ]);
 </script>

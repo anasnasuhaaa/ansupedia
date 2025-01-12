@@ -1,12 +1,12 @@
 <template>
   <!-- <Title></Title> -->
   <div>
-    <CardAbout></CardAbout>
+    <About></About>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import CardAbout from "../components/CardAbout.vue";
 import Title from "../components/Title.vue";
+import About from "../components/CardAbout.vue";
 provide("name", "About Me");
 </script>

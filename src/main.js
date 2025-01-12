@@ -9,6 +9,7 @@ import * as FaIcons from "oh-vue-icons/icons/fa";
 import * as CoIcons from "oh-vue-icons/icons/co";
 import * as SiIcons from "oh-vue-icons/icons/si";
 import { useThemeStore } from "./stores/ThemeStore";
+import router from "./routes/route";
 
 const pinia = createPinia();
 
@@ -20,7 +21,8 @@ addIcons(...Fa, ...Co, ...Si);
 const app = createApp(App);
 app.component("v-icon", OhVueIcon);
 app.use(pinia);
+app.use(router);
 app.mount("#app");
 
 const themeStore = useThemeStore();
-document.documentElement.setAttribute('data-theme', themeStore.theme)
+document.documentElement.setAttribute("data-theme", themeStore.theme);

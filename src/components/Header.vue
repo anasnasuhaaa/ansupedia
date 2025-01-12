@@ -23,20 +23,26 @@
             tabindex="0"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Project</a></li>
-            <li><a>Certificate</a></li>
+            <li v-for="nav in linkNav">
+              <a
+                ><RouterLink :to="{ name: nav.urlName }">{{
+                  nav.pathName
+                }}</RouterLink></a
+              >
+            </li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl">Ansupedia</a>
+        <a class="btn btn-ghost text-xl"><RouterLink to="/">Ansupedia</RouterLink></a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Project</a></li>
-          <li><a>Certificate</a></li>
+          <li v-for="nav in linkNav">
+            <a
+              ><RouterLink :to="{ name: nav.urlName }">{{
+                nav.pathName
+              }}</RouterLink></a
+            >
+          </li>
         </ul>
       </div>
       <div class="navbar-end">
@@ -86,29 +92,29 @@
             tabindex="0"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Project</a></li>
-            <li><a>Certificate</a></li>
+            <li v-for="nav in linkNav">
+              <a
+                ><RouterLink :to="{ name: nav.urlName }">{{
+                  nav.pathName
+                }}</RouterLink></a
+              >
+            </li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl">Ansupedia</a>
+        <a class="btn btn-ghost text-xl"><RouterLink to="/">Ansupedia</RouterLink></a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Project</a></li>
-          <li><a>Certificate</a></li>
+          <li v-for="nav in linkNav">
+            <a
+              ><RouterLink :to="{ name: nav.urlName }">{{
+                nav.pathName
+              }}</RouterLink></a
+            >
+          </li>
         </ul>
       </div>
       <div class="navbar-end">
-        <!-- <a
-          class="btn btn-neutral text-white"
-          href="https://github.com/anasnasuhaaa"
-          target="_blank"
-          >My GitHub <v-icon name="fa-github" class="text-white"></v-icon
-        ></a> -->
         <v-icon
           v-if="themeStore.theme === 'cupcake'"
           name="co-sun"
@@ -127,10 +133,24 @@
   </div>
 </template>
 <script setup>
+import { RouterLink } from "vue-router";
 import { useThemeStore } from "../stores/ThemeStore";
 const themeStore = useThemeStore();
-// State untuk checkbox
-// Fungsi untuk toggle tema
+
+const linkNav = [
+  {
+    pathName: "About",
+    urlName: "about",
+  },
+  {
+    pathName: "Project",
+    urlName: "project",
+  },
+  {
+    pathName: "Experience",
+    urlName: "experience",
+  }
+];
 const toggleTheme = () => {
   const newTheme = themeStore.theme === "cupcake" ? "luxury" : "cupcake";
   themeStore.setTheme(newTheme);

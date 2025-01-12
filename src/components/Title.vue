@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-3xl font-medium mb-4">{{ name }}</h1>
+  <h1 class="md:text-3xl text-xl underline font-medium mb-6">{{ name }}</h1>
 </template>
 <script setup>
 import { inject } from "vue";

@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="themeStore.theme == 'cupcake'"
-    class="card bg-base-100 rounded-md shadow-md transition-all duration-200 hover:scale-105 hover:shadow-xl"
+    class="card bg-base-100 rounded-md shadow-md transition-all duration-100 hover:scale-105 hover:shadow-xl"
     v-for="item in project"
   >
     <figure>
