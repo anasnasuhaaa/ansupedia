@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio | Your Name",
+  title: "Portfolio | Anas Nasuha",
   description: "Welcome to my professional portfolio. Showcasing web development projects, skills, and experience.",
   keywords: "developer, portfolio, web development, next.js, react, typescript",
   authors: [{ name: "Your Name" }],

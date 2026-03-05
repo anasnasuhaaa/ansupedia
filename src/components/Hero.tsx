@@ -73,16 +73,9 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          {/* <motion.a
-            href="#projects"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="button-primary flex items-center gap-2 w-full sm:w-auto justify-center"
-          >
-            View Projects <FiArrowRight />
-          </motion.a> */}
           <motion.a
             href="https://github.com/anasnasuhaaa"
+            target='_blank'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="button-secondary flex items-center gap-2 w-full sm:w-auto justify-center"

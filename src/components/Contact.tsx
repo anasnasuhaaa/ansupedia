@@ -8,19 +8,19 @@ const Contact = () => {
     {
       icon: FiInstagram,
       label: 'Instagram',
-      href: 'https://instagram.com',
+      href: 'https://instagram.com/anass.nsh',
       color: 'bg-gradient-to-r from-pink-500 to-red-500 hover:shadow-pink-500/50',
     },
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/anasnasuhaaa',
       color: 'bg-slate-700 hover:bg-slate-600 hover:shadow-slate-700/50',
     },
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/anas-nasuha-026186327?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BceS7GeqoTC2PXx47Z9WYOA%3D%3D',
       color: 'bg-blue-600 hover:bg-blue-700 hover:shadow-blue-600/50',
     },
   ];
@@ -36,11 +36,11 @@ const Contact = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
+    hidden: { opacity: 0, scale: 0.2 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -50,7 +50,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >

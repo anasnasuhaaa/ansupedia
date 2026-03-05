@@ -6,11 +6,11 @@ import { FiCalendar, FiBriefcase, FiBook } from 'react-icons/fi';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Programming Staf Ristek',
+      title: 'Ristek Programming Division',
       company: 'Ormawa Eksekutif PKU IPB 2025/2026.',
       period: '2025 - Present',
       type: 'experience',
-      description: 'Leading frontend development with Next.js and React. Building scalable architectures and mentoring junior developers.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis laoreet sapien. Phasellus laoreet vel ligula et eleifend.',
       skills: ['Next.js', 'Laravel'],
     },
     {
@@ -18,15 +18,15 @@ const Experience = () => {
       company: 'IPB University.',
       period: '2025 - Present',
       type: 'education',
-      description: 'Developed and maintained multiple client projects. Implemented responsive designs and RESTful APIs.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis laoreet sapien. Phasellus laoreet vel ligula et eleifend.',
       skills: ['Computational Thinking', 'Basic Progamming', 'Calculus'],
     },
     {
       title: 'Web Developer Intern',
       company: 'PT. Sanbersy',
       period: '2024',
-      type: 'education',
-      description: 'Intensive 12-week bootcamp covering Full-Stack development, modern frameworks, and industry best practices.',
+      type: 'experience',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis laoreet sapien. Phasellus laoreet vel ligula et eleifend.',
       skills: ['Laravel', 'MySQL', 'Bootstrap', 'JQuery'],
     },
   ];

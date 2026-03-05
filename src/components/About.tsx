@@ -79,29 +79,35 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* About Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
-              I&apos;m a passionate full-stack developer with expertise in building modern web applications.
-              With a strong foundation in both frontend and backend technologies, I create seamless digital experiences
-              that solve real-world problems.
-            </p>
-            <p className="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
-              I also interest in Cyber Security and playing Capture the Flag Challenges.
-            </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ x: 5 }}
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+          <div>
+            <motion.div variants={itemVariants}>
+              <h1 className="heading-xl mb-6">
+                <span className="gradient-text">Anas Nasuha</span>
+              </h1>
+            </motion.div>
+            {/* About Text */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              Let&apos;s work together →
-            </motion.a>
-          </motion.div>
+              <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+                I&apos;m a passionate full-stack developer with experience in building modern web applications. With a strong foundation in both frontend and backend technologies, I enjoy creating seamless digital experiences that solve real-world problems.
+              </p>
+              <p className="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
+                I also have a strong interest in cybersecurity and enjoy participating in Capture The Flag (CTF) challenges.
+              </p>
+              <motion.a
+                href="#contact"
+                whileHover={{ x: 5 }}
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+              >
+                Let&apos;s work together →
+              </motion.a>
+            </motion.div>
+          </div>
+
         </div>
 
         {/* Interests Cards */}
