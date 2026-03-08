@@ -3,13 +3,12 @@
 import { motion } from 'framer-motion';
 import {
   FaReact,
-  FaNode,
   FaLaravel,
   FaDatabase,
   FaPython,
   FaLinux,
 } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit, SiJavascript, SiPhp, SiPostman } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiPostgresql, SiGit, SiJavascript, SiPhp, SiPostman, SiGo } from 'react-icons/si';
 
 const TechStack = () => {
   const techGroups = [
@@ -20,6 +19,7 @@ const TechStack = () => {
         { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500' },
         { name: 'PHP', icon: SiPhp, color: 'text-purple-500' },
         { name: 'Python', icon: FaPython, color: 'text-blue-400' },
+           { name: 'Golang', icon: SiGo, color: 'text-cyan-400' },
       ],
     },
     {
