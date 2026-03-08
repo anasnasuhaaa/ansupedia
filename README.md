@@ -6,16 +6,12 @@ A modern, professional developer portfolio website built with **Next.js 16**, **
 ## ✨ Features
 
 - 🎨 **Modern Design** - Clean, minimal, and visually appealing interface
-- 🌓 **Dark Mode** - Full dark/light mode support with system preference detection
 - ⚡ **Smooth Animations** - Framer Motion animations for entrance effects and interactions
 - 📱 **Responsive Design** - Mobile-first approach, works perfectly on all devices
 - ✍️ **Typewriter Effect** - Dynamic role showcase with typewriter animation
 - 🔝 **Sticky Navigation** - Smooth scrolling to sections with active state
 - 📰 **Hamburger Menu** - Mobile-friendly navigation menu
 - 🎭 **Timeline Layout** - Experience and education section with beautiful timeline
-- 📊 **GitHub Stats** - Display GitHub activity and language statistics
-- 🎪 **Marquee** - Scrolling tech stack showcase
-- 💬 **Contact Form** - Functional contact form with validation
 - 🎯 **SEO Optimized** - Meta tags and open graph configuration
 
 ## 🛠️ Tech Stack
