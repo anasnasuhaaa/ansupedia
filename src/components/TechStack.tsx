@@ -19,7 +19,7 @@ const TechStack = () => {
         { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500' },
         { name: 'PHP', icon: SiPhp, color: 'text-purple-500' },
         { name: 'Python', icon: FaPython, color: 'text-blue-400' },
-           { name: 'Golang', icon: SiGo, color: 'text-cyan-400' },
+           { name: 'Go', icon: SiGo, color: 'text-cyan-400' },
       ],
     },
     {
