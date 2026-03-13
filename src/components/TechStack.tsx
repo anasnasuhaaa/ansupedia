@@ -38,13 +38,13 @@ const TechStack = () => {
         { name: 'Postman', icon: SiPostman, color: 'text-orange-400' },
       ],
     },
-    {
-      title: 'Other',
-      techs: [
-        { name: 'Kali Linux', icon: FaLinux, color: 'text-red-600' },
-        { name: 'Burp Suite', icon: FaReact, color: 'text-orange-500' },
-      ],
-    },
+    // {
+    //   title: 'Other',
+    //   techs: [
+    //     { name: 'Kali Linux', icon: FaLinux, color: 'text-red-600' },
+    //     { name: 'Burp Suite', icon: FaReact, color: 'text-orange-500' },
+    //   ],
+    // },
   ];
 
   const containerVariants = {
@@ -89,7 +89,7 @@ const TechStack = () => {
         >
           {techGroups.map((group, groupIndex) => (
             <motion.div
-              key={group.title}
+              key={groupIndex}
               variants={itemVariants}
               className="bg-slate-900 rounded-xl p-8 border border-slate-800"
             >
