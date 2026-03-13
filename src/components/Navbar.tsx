@@ -3,12 +3,20 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiSun, FiMoon, FiMonitor } from 'react-icons/fi';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Navbar = () => {
+  const { mode, setMode } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [isThemeOpen, setIsThemeOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,13 +78,66 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right Side - Mobile Menu */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 rounded-lg bg-slate-800 transition-colors hover:bg-slate-700"
-        >
-          {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
+        {/* Right Side - Theme Switcher & Mobile Menu */}
+        <div className="flex items-center gap-2">
+          {/* Theme Switcher */}
+          {mounted && (
+            <div className="relative">
+              <button
+                onClick={() => setIsThemeOpen(!isThemeOpen)}
+                className="p-2 rounded-lg bg-slate-800 transition-colors hover:bg-slate-700"
+                title="Change theme"
+              >
+                {mode === 'light' && <FiSun size={20} />}
+                {mode === 'dark' && <FiMoon size={20} />}
+                {mode === 'system' && <FiMonitor size={20} />}
+              </button>
+
+              {/* Theme Dropdown Menu */}
+              {isThemeOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute right-0 mt-2 w-40 bg-slate-800 rounded-lg border border-slate-700 shadow-lg z-50 overflow-hidden"
+                >
+                  {[
+                    { label: 'System', value: 'system' as const, icon: FiMonitor },
+                    { label: 'Light', value: 'light' as const, icon: FiSun },
+                    { label: 'Dark', value: 'dark' as const, icon: FiMoon },
+                  ].map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <button
+                        key={item.value}
+                        onClick={() => {
+                          setMode(item.value);
+                          setIsThemeOpen(false);
+                        }}
+                        className={`w-full px-4 py-3 flex items-center gap-3 text-sm font-medium transition-colors ${mode === item.value
+                            ? 'bg-blue-600 text-white'
+                            : 'text-slate-100 hover:bg-slate-700'
+                          }`}
+                      >
+                        <Icon size={18} />
+                        {item.label}
+                      </button>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </div>
+          )}
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-lg bg-slate-800 transition-colors hover:bg-slate-700"
+          >
+            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -97,6 +158,38 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
+
+          {/* Mobile Theme Switcher */}
+          {mounted && (
+            <div className="pt-2 border-t border-slate-700">
+              <div className="text-xs font-semibold text-slate-400 px-4 py-2">Theme</div>
+              <div className="space-y-1">
+                {[
+                  { label: 'System', value: 'system' as const, icon: FiMonitor },
+                  { label: 'Light', value: 'light' as const, icon: FiSun },
+                  { label: 'Dark', value: 'dark' as const, icon: FiMoon },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <button
+                      key={item.value}
+                      onClick={() => {
+                        setMode(item.value);
+                        setIsOpen(false);
+                      }}
+                      className={`w-full px-4 py-2 flex items-center gap-3 text-sm font-medium transition-colors rounded-lg ${mode === item.value
+                          ? 'bg-blue-600 text-white'
+                          : 'text-slate-100 hover:bg-slate-800'
+                        }`}
+                    >
+                      <Icon size={18} />
+                      {item.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.nav>
